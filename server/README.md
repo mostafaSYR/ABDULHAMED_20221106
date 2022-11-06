@@ -1,24 +1,16 @@
 # README
+Ruby on Rails Api. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Endpoints
+1. GET /categories => to list all available categories
+2. GET /videos => to list all videos
+3. POST /videos => to upload a new video
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Requirements 
+in case one does not use docker. 
+1. ruby 3.x
+2. rails 7.x
+3. postgresql.
+4. imagemagick.
+5. ffmpeg.
