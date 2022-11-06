@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;" (click)="playVideo()">
+  <video class="card-img-top" [poster]="video.thumbnail"  controls>
+    <source [src]="video.file" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+  <div class="card-body">
+    <h5 class="card-title"> {{ video.category }} </h5>
+    <p class="card-text"> {{ video.title }} </p>
+  </div>
+</div>

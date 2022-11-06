@@ -1,0 +1,9 @@
+<div class="d-flex flex-row-reverse">
+  <button class="btn btn-primary" (click)="navigateToUpload()"> Upload Video  <i class="bi bi-upload"></i> </button>
+</div>
+<div class="row">
+  <div class="col" size="6" *ngFor="let video of videos">
+    <app-video [video]="video">
+    </app-video>
+  </div>
+</div>

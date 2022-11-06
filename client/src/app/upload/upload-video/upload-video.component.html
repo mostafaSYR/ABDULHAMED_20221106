@@ -1,0 +1,31 @@
+<div class="d-flex flex-row-reverse">
+  <button class="btn btn-primary" (click)="navigateToListVideos()"> Your Videos</button>
+</div>
+
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div class="mb-3">
+    <label for="title"> Video Title</label>
+    <input id="title" formControlName="title" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="categoryID"> Category </label>
+    <select id="categoryID" class="form-control" formControlName="categoryId">
+      <option *ngFor="let category of categories" [value]="category.id"> {{ category.title}} </option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="file"> File</label>
+    <input id="file" type="file" class="form-control" (change)="uploadFile($event)">
+  </div>
+
+  <button type="submit" class="btn btn-primary"> Upload</button>
+</form>
+<div class="alert alert-success" role="alert" *ngIf="uploaded && !error">
+  Successfully Uploaded!
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="uploaded && error">
+  {{ error }}
+</div>
+
